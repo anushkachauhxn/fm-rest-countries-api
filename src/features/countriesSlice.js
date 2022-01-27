@@ -12,6 +12,8 @@ export const countriesSlice = createSlice({
     turnFilterOn: (state, action) => {
       state.filterOn = true;
       state.filterVal = action.payload;
+      state.searchOn = false;
+      state.searchVal = "";
     },
     turnFilterOff: (state) => {
       state.filterOn = false;
@@ -20,6 +22,8 @@ export const countriesSlice = createSlice({
     turnSearchOn: (state, action) => {
       state.searchOn = true;
       state.searchVal = action.payload;
+      state.filterOn = false;
+      state.filterVal = "";
     },
     turnSearchOff: (state) => {
       state.searchOn = false;
