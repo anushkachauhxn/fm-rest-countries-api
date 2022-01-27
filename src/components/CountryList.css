@@ -1,0 +1,7 @@
+.countryList {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 75px;
+  place-items: center;
+}

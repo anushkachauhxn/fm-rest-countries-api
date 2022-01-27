@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import './Main.css';
 import { Button } from '@mui/material';
+import './Main.css';
+import CountryList from './CountryList';
 
 function Main() {
     const [menu, setMenu] = useState(false);
@@ -39,6 +40,7 @@ function Main() {
             </div>
 
             <div className="main__body">
+                <CountryList />
             </div>
         </div>
     );
