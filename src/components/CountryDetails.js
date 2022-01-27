@@ -34,6 +34,17 @@ function CountryDetails() {
         .catch((err) => console.log(err));
     }, [id]);
 
+    function getString(array) {
+        var str = "";
+        for (let i = 0; i < array.length; i++) {
+            str += (array[i].name.toString());
+            if (i !== array.length - 1) {
+                str += ", ";
+            }
+        }
+        return str;
+    }
+
     return (
         <div className="countryDetails">
             <Button 
@@ -59,7 +70,8 @@ function CountryDetails() {
                             </li>
                             <li>
                                 <span>Population: </span>
-                                {country.population}
+                                {/* https://stackoverflow.com/a/2901298/12302691 */}
+                                {country.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                             </li>
                             <li>
                                 <span>Region: </span>
@@ -81,11 +93,11 @@ function CountryDetails() {
                             </li>
                             <li>
                                 <span>Currencies: </span>
-                                {/* {getString(country.currencies)} */}
+                                {getString(country.currencies || [])}
                             </li>
                             <li>
                                 <span>Languages: </span>
-                                {/* {getString(country.languages)} */}
+                                {getString(country.languages || [])}
                             </li>
                         </ul>
                     </div>
