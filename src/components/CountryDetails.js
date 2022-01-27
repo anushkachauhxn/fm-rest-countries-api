@@ -25,13 +25,29 @@ function CountryDetails() {
     };
 
     const [country, setCountry] = useState(empty);
+    const [allCountries, setAllCountries] = useState([]);
+
+    // https://stackoverflow.com/a/61577142/12302691
     useEffect(() => {
-        fetch(`https://restcountries.com/v2/alpha/${id}`)
-        .then(res => res.json())
-        .then(data => {
-            setCountry(data);
-        })
-        .catch((err) => console.log(err));
+        async function getThisCountry() {
+            await fetch(`https://restcountries.com/v2/alpha/${id}`)
+            .then(res => res.json())
+            .then(data => {
+                setCountry(data);
+            })
+            .catch((err) => console.log(err));
+        }
+        async function getAllCountries() {
+            await fetch("https://restcountries.com/v2/all")
+            .then(res => res.json())
+            .then(data => {
+                setAllCountries(data);
+            })
+            .catch((err) => console.log(err));
+        }
+
+        getThisCountry();
+        getAllCountries();
     }, [id]);
 
     function getString(array) {
@@ -43,6 +59,17 @@ function CountryDetails() {
             }
         }
         return str;
+    }
+
+    function getCountryName(countryId) {
+        let borderCountry = allCountries.filter((country) => {
+            if (country.alpha3Code === countryId) {
+                return true;
+            } else {
+                return false;
+            }
+        });
+        return (borderCountry[0] ? borderCountry[0].name : "");
     }
 
     return (
@@ -104,15 +131,17 @@ function CountryDetails() {
 
                     <div className="countryDetails__borders">
                         <span>Border Countries: </span>
-                        <div className="countryDetails__bordersBtn">
-                            {country.borders.map((border) => {
-                                return (
-                                    <Button onClick={() => history.push(`/country/${border}`)}>
-                                        {border}
-                                    </Button>
-                                );
-                            })}
-                        </div>
+                        {country.borders ? (
+                            <div className="countryDetails__bordersBtn">
+                                {country.borders.map((border) => {
+                                    return (
+                                        <Button onClick={() => history.push(`/country/${border}`)}>
+                                            {getCountryName(border)}
+                                        </Button>
+                                    );
+                                })}
+                            </div>
+                        ) : "None"}
                     </div>
                 </div>
             </div>
