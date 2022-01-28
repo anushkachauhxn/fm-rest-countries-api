@@ -15,7 +15,7 @@ function CountryCard({ id, flag, name, population, region, capital }) {
                     <ul>
                         <li>
                             <span>Population: </span>
-                            {population}
+                            {population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                         </li>
                         <li>
                             <span>Region: </span>

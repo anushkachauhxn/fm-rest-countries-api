@@ -77,8 +77,7 @@ function CountryDetails() {
             <Button 
                 onClick={() => history.push("/")}
                 className="countryDetails__btn"
-                variant="text"
-                color="secondary"
+                variant="contained"
                 startIcon={<ion-icon name="arrow-back-sharp"></ion-icon>}
             >
                 Back
@@ -135,7 +134,7 @@ function CountryDetails() {
                             <div className="countryDetails__bordersBtn">
                                 {country.borders.map((border) => {
                                     return (
-                                        <Button onClick={() => history.push(`/country/${border}`)}>
+                                        <Button onClick={() => history.push(`/country/${border}`)} variant="contained">
                                             {getCountryName(border)}
                                         </Button>
                                     );
