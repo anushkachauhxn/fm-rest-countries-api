@@ -25,3 +25,22 @@
 .header__btn ion-icon {
   color: var(--text-color);
 }
+
+@media (max-width: 376px) {
+  .header {
+    padding: 32px 16px;
+  }
+
+  .header h1 {
+    font-size: 16px;
+    letter-spacing: -0.25px;
+  }
+
+  .header__btn {
+    padding: 0 !important;
+    font-size: 14px !important;
+  }
+  .header__btn ion-icon {
+    font-size: 14px !important;
+  }
+}

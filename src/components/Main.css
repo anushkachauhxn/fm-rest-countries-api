@@ -97,3 +97,25 @@
 .main__body {
   margin-top: 48px;
 }
+
+@media (max-width: 376px) {
+  .main {
+    padding: 24px 16px;
+  }
+
+  .main__header {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 40px;
+  }
+  .main__search {
+    width: 100%;
+  }
+  .main__filter {
+    width: 60%;
+  }
+
+  .main__body {
+    margin-top: 32px;
+  }
+}
