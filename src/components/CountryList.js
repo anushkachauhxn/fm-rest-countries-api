@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { selectFilterOn, selectFilterVal, selectSearchOn, selectSearchVal } from '../features/countriesSlice';
 import CountryCard from './CountryCard';
@@ -33,7 +33,7 @@ function CountryList() {
 
     return (
         <div className="countryList">
-            {countries.map(({ alpha3Code, flags: { svg }, name, population, region, capital }) => (
+            {countries?.map(({ alpha3Code, flags: { svg }, name, population, region, capital }) => (
                 <CountryCard 
                     id={alpha3Code}
                     flag={svg} 
