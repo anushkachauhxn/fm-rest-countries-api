@@ -21,7 +21,7 @@ function App() {
             <Route path={`/country/:id`}>
               <CountryDetails />
             </Route>
-            <Route path="/rock-paper-scissors">
+            <Route path="/play-game">
               <Suspense fallback={<div>Loading Game...</div>}>
                 <RockPaperScissorsApp />
               </Suspense>

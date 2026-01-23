@@ -14,7 +14,7 @@ function Header() {
                 <h1>Where in the World?</h1>
             </Link>
             <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-                <Link to="/rock-paper-scissors" style={{ textDecoration: 'none' }}>
+                <Link to="/play-game" style={{ textDecoration: 'none' }}>
                     <Button
                         className="header__btn"
                         variant="text"
