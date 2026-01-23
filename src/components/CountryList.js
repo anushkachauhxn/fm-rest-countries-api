@@ -18,7 +18,7 @@ function CountryList() {
         } else if (filterOn) {
             fetchCountries("https://restcountries.com/v2/region/" + filterVal);
         } else {
-            fetchCountries("https://restcountries.com/v2/all");
+            fetchCountries("https://restcountries.com/v2/all?fields=name,capital,region,population,flags,alpha3Code");
         }
     }, [searchOn, searchVal, filterOn, filterVal]);
 
@@ -34,7 +34,8 @@ function CountryList() {
     return (
         <div className="countryList">
             {countries?.map(({ alpha3Code, flags: { svg }, name, population, region, capital }) => (
-                <CountryCard 
+                <CountryCard
+                    key={alpha3Code}
                     id={alpha3Code}
                     flag={svg} 
                     name={name}
