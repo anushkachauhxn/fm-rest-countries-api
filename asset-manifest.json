@@ -1,13 +1,24 @@
 {
   "files": {
-    "main.css": "/fm-rest-countries-api/static/css/main.a2763572.css",
-    "main.js": "/fm-rest-countries-api/static/js/main.dc181fff.js",
+    "main.js": "/fm-rest-countries-api/static/js/main.c1bcd68c.js",
+    "static/css/903.8ad6ffc2.chunk.css": "/fm-rest-countries-api/static/css/903.8ad6ffc2.chunk.css",
+    "static/js/903.ffc60750.chunk.js": "/fm-rest-countries-api/static/js/903.ffc60750.chunk.js",
+    "static/js/164.e9eb5b53.chunk.js": "/fm-rest-countries-api/static/js/164.e9eb5b53.chunk.js",
+    "static/js/909.fb6eb84f.chunk.js": "/fm-rest-countries-api/static/js/909.fb6eb84f.chunk.js",
+    "static/js/791.d5334354.chunk.js": "/fm-rest-countries-api/static/js/791.d5334354.chunk.js",
+    "static/js/506.7e8588a2.chunk.js": "/fm-rest-countries-api/static/js/506.7e8588a2.chunk.js",
+    "static/js/417.34aa21f4.chunk.js": "/fm-rest-countries-api/static/js/417.34aa21f4.chunk.js",
     "index.html": "/fm-rest-countries-api/index.html",
-    "main.a2763572.css.map": "/fm-rest-countries-api/static/css/main.a2763572.css.map",
-    "main.dc181fff.js.map": "/fm-rest-countries-api/static/js/main.dc181fff.js.map"
+    "main.c1bcd68c.js.map": "/fm-rest-countries-api/static/js/main.c1bcd68c.js.map",
+    "903.8ad6ffc2.chunk.css.map": "/fm-rest-countries-api/static/css/903.8ad6ffc2.chunk.css.map",
+    "903.ffc60750.chunk.js.map": "/fm-rest-countries-api/static/js/903.ffc60750.chunk.js.map",
+    "164.e9eb5b53.chunk.js.map": "/fm-rest-countries-api/static/js/164.e9eb5b53.chunk.js.map",
+    "909.fb6eb84f.chunk.js.map": "/fm-rest-countries-api/static/js/909.fb6eb84f.chunk.js.map",
+    "791.d5334354.chunk.js.map": "/fm-rest-countries-api/static/js/791.d5334354.chunk.js.map",
+    "506.7e8588a2.chunk.js.map": "/fm-rest-countries-api/static/js/506.7e8588a2.chunk.js.map",
+    "417.34aa21f4.chunk.js.map": "/fm-rest-countries-api/static/js/417.34aa21f4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a2763572.css",
-    "static/js/main.dc181fff.js"
+    "static/js/main.c1bcd68c.js"
   ]
 }
